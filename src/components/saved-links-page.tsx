@@ -128,7 +128,7 @@ export function SavedLinksPage() {
         campaignSource: l.campaignSource || "instagram",
         creatorCode: l.creatorCode || "creator_demo",
         status: l.status || "draft",
-        provider: (l as Record<string, unknown>).provider as string || "viator",
+        provider: (l as unknown as Record<string, unknown>).provider as string || "viator",
       };
       const clicks = simulateClicks(migrated.createdAt);
       return {
